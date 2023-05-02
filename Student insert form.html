@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)https://blackboard.vsu.edu/bbcswebdav/pid-1968725-dt-content-rid-24124887_1/courses/CSCI-356-01-SPR23/insert_form%285%29.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Student insert form</title>
+<style>
+    body {
+        background-color: orangered;
+    }
+
+    label {
+        color: blue;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        border: solid blue 5px;
+        width: 500px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    form {
+        border: solid blue 5px;
+        padding: 20px;
+        background-color: white;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    input, textarea {
+        background-color: lightgray;
+        padding: 5px;
+    }
+
+    select {
+        background-color: lightgray;
+    }
+</style></head>
+
+
+<body>
+    
+    <h1>Enter values to be inserted in database</h1>
+
+    <form method="post" action="https://blackboard.vsu.edu/bbcswebdav/pid-1968725-dt-content-rid-24124887_1/courses/CSCI-356-01-SPR23/insert.php">
+
+        <!--Fixed length entry, min and max == 6. Useful for Char domains-->
+        <label for="vnum">V-number</label><br>
+        <input type="text" id="vnum" name="vnum" placeholder="V00NNN" required="" minlength="6" maxlength="6"><br><br>
+
+        <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="..." required=""><br><br>
+
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname" name="lname" placeholder="..." required=""><br><br>
+
+        <label for="classification">Classification</label>
+        <select id="classification" name="classification" required="">
+            <option value="none">--</option>
+            <option value="FR">FR</option>
+            <option value="SO">SO</option>
+            <option value="JR">JR</option>
+            <option value="SR">SR</option>
+        </select>
+        <br><br>
+
+        <label for="major">Major</label><br>
+        <input type="text" id="major" name="major" placeholder="..." required=""><br><br>
+
+        <label for="credits">Credits</label><br>
+        <input type="number" step="1" id="credits" name="credits" placeholder="0" min="0" required=""><br><br>
+
+        <!--
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="...@."><br><br>
+        -->
+        <label for="gpa">GPA</label><br>
+        <input type="number" step="any" id="gpa" name="gpa" placeholder="0.000" min="0" max="4"><br><br>
+
+        <!--
+        <label for="graduationDate">Graduation date</label><br>
+        <input type="date" id="graduationDate" name="graduationDate"><br><br>
+
+        <label>Student organizations</label><br>
+        
+        <input type="checkbox" id="organization1" name="organization1" value="ACM">
+        <label for="organization1"> ACM student chapter</label><br>
+        
+        <input type="checkbox" id="organization2" name="organization2" value="SGA">
+        <label for="organization2"> SGA</label><br>
+        
+        <input type="checkbox" id="organization3" name="organization3" value="NSBE">
+        <label for="organization3"> NSBE</label><br><br>
+        -->
+
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter address..." required=""></textarea>
+        <br><br>
+
+        <label for="phone">Phone number</label><br>
+        <input type="text" id="phone" name="phone" required=""><br><br>
+
+        <input type="submit" name="submit" value="INSERT" style="background-color:gray">
+        
+    </form>
+
+
+</body></html>

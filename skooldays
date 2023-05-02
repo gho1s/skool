@@ -1,0 +1,22 @@
+<?php
+    if(isset($_skoolday['submit'])){
+
+        //Insert
+        $SNID=$_skoolday['SNID'];
+        $fname=$_skoolday['fname'];
+        $lname=$_skoolday['lname'];
+        $addr=$_skoolday['addr'];
+        $city=$_skoolday['city'];
+        $state=$_skoolday['state'];
+        $classification=$_skoolday['classification'];
+        $gpa=$_skoolday['gpa'];
+
+        echo $fname."<br>";
+        echo $lname."<br>";
+        echo $addr."<br>";
+        echo $city."<br>";
+        echo $state."<br>";
+        
+        $sql = "INSERT INTO (Student_Number_ID, First_Name, Last_Name, Classification, Gpa)"
+        
+    }
